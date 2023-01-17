@@ -9,7 +9,6 @@
 **NOTA:** Para las modificaciones o implementaciones en Vue, se puede hacer uso del Options API o Composition API.
 
 # Requerimientos
-El resultado final de la aplicación debe permitir:
 - Registro exitoso de usuarios.
 - Login de los usuarios registrados al dashboard.
 - Cambiar la zona horaria a **Bogotá** y el lenguaje por defecto a **Español**.
