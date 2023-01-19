@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Usercontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::get('/GetUsers', [Usercontroller::class, 'index'])->middleware(['auth', 'verified']);
+Route::get('/DeleteUser/{id}', [Usercontroller::class, 'destroy'])->middleware(['auth', 'verified']);
+
+require __DIR__ . '/auth.php';
